@@ -88,9 +88,7 @@ public class Brick {
         });
     }
     public boolean canBeRemoved() {
-        if (this.resters == null) {
-            return true;
-        } else {
+        if (this.resters != null) {
             for (Brick rester : resters) {
                 if (rester.supporters.size() < 2) {
                     return false;
